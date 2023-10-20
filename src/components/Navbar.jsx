@@ -16,7 +16,7 @@ const white = "__white";
 // bg-gray-800
 const Navbarr = () => {
   return (
-    <div class="h-screen w-full relative flex overflow-hidden">
+    <div class="h-screen w-full absolute flex overflow-hidden">
       <aside
         class="h-full w-16 flex flex-col space-y-10 items-center justify-center relative
      
