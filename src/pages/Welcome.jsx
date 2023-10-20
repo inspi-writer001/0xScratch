@@ -24,7 +24,6 @@ const Welcome = () => {
           className="__logo"
           style={{
             position: "relative",
-            // center this object ---
             left: "50%",
             transform: "translateX(-50%)"
           }}
