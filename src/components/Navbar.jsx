@@ -15,6 +15,7 @@ import profilePicture from "../assets/72.png";
 import Welcome from "../pages/Welcome";
 import Home from "../pages/Home";
 import { Link } from "react-router-dom";
+import Airdrop from "../pages/Airdrop";
 
 const white = "__white";
 // bg-gray-800
@@ -40,7 +41,9 @@ const Navbarr = () => {
         </div>
 
         <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
-          <Gift />
+          <Link to="/airdrop">
+            <Gift />
+          </Link>
         </div>
 
         <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
@@ -81,10 +84,11 @@ const Navbarr = () => {
           </div>
         </header>
 
-        <main class="max-w-full h-full flex relative overflow-y-hidden">
+        <main class="max-w-full h-full flex relative overflow-x-hidden">
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/airdrop" element={<Airdrop />} />
             {/* <Route path="/navbar" element={<Navbarr />} /> */}
           </Routes>
 

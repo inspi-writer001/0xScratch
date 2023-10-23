@@ -3,7 +3,7 @@ import profilePicture from "../assets/72.png";
 
 const CreatePost = () => {
   return (
-    <div className="md:w-3/5 __considerNavBarWidth border border-gray-600 h-auto  border-t-0">
+    <div className="md:w-3/5 __considerNavBarWidth h-auto  border-t-0">
       {/* <!--middle wall--> */}
 
       <div className="flex">
