@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import {
   House,
   Gift,
@@ -11,6 +12,9 @@ import {
 } from "react-bootstrap-icons";
 import Logo from "../assets/scratch.png";
 import profilePicture from "../assets/72.png";
+import Welcome from "../pages/Welcome";
+import Home from "../pages/Home";
+import { Link } from "react-router-dom";
 
 const white = "__white";
 // bg-gray-800
@@ -30,7 +34,9 @@ const Navbarr = () => {
         </div>
 
         <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white ">
-          <House />
+          <Link to="/home">
+            <House />
+          </Link>
         </div>
 
         <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
@@ -75,8 +81,14 @@ const Navbarr = () => {
           </div>
         </header>
 
-        {/* <main class="max-w-full h-full flex relative overflow-y-hidden"> */}
-        {/* <div class="h-full w-full m-4 flex flex-wrap items-start justify-start rounded-tl grid-flow-col auto-cols-max gap-4 overflow-y-scroll text-white ">
+        <main class="max-w-full h-full flex relative overflow-y-hidden">
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/home" element={<Home />} />
+            {/* <Route path="/navbar" element={<Navbarr />} /> */}
+          </Routes>
+
+          {/* <div class="h-full w-full m-4 flex flex-wrap items-start justify-start rounded-tl grid-flow-col auto-cols-max gap-4 overflow-y-scroll text-white ">
             <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400">
               a
             </div>
@@ -105,7 +117,7 @@ const Navbarr = () => {
               i
             </div>
           </div> */}
-        {/* </main> */}
+        </main>
       </div>
     </div>
   );

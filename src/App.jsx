@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import "./styles/mobile.css";
 import "./styles/generic.css";
 
 import Welcome from "./pages/Welcome";
@@ -11,10 +12,6 @@ function App() {
     <div className="App">
       <Router>
         <Navbarr />
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          {/* <Route path="/navbar" element={<Navbarr />} /> */}
-        </Routes>
       </Router>
     </div>
   );
