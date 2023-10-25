@@ -16,6 +16,7 @@ import Welcome from "../pages/Welcome";
 import Home from "../pages/Home";
 import { Link } from "react-router-dom";
 import Airdrop from "../pages/Airdrop";
+import Profile from "../pages/Profile";
 
 const white = "__white";
 // bg-gray-800
@@ -29,9 +30,11 @@ const Navbarr = () => {
         text-white"
       >
         <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white">
-          <div className="__logo">
-            <img src={Logo} alt="0xscratch_logo" />
-          </div>
+          <Link to="/profile">
+            <div className="__logo">
+              <img src={Logo} alt="0xscratch_logo" />
+            </div>
+          </Link>
         </div>
 
         <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 hover:bg-white  hover:duration-300 hover:ease-linear focus:bg-white ">
@@ -89,6 +92,7 @@ const Navbarr = () => {
             <Route path="/" element={<Welcome />} />
             <Route path="/home" element={<Home />} />
             <Route path="/airdrop" element={<Airdrop />} />
+            <Route path="/profile" element={<Profile />} />
             {/* <Route path="/navbar" element={<Navbarr />} /> */}
           </Routes>
 
